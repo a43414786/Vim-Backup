@@ -169,4 +169,6 @@ au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 " 快速建立 html tag，用法非常靈活，明天會專門講他的用法
 Plug 'mattn/emmet-vim'
 
+Plug 'Valloric/YouCompleteMe'
+
 call plug#end()
