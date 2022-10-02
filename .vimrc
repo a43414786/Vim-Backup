@@ -1,17 +1,3 @@
-set timeoutlen=1000 ttimeoutlen=0
-call plug#begin('~/.vim/plugged')
-Plug 'dense-analysis/ale'
-let g:ale_echo_cursor = 0
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
-Plug 'maralla/completor.vim'
-let g:completor_clang_binary = '/usr/bin/clang'
-inoremap <expr> <TAB> pumvisible() ?"\<C-n>": "\<TAB>"
-inoremap <expr> <S-TAB> pumvisible() ?"\<C-p>": "\<S-TAB>"
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme = 'ouo'
-
 " 打開語法突顯
 syntax on
 
@@ -94,6 +80,20 @@ command WQ wq
 " fix bg color error in Pmenu
 " 這個只是顯示問題，有時候背景色和前景色一樣你就看不到字了，所以要自己把他換掉，語法等等會講
 " https://vi.stackexchange.com/questions/23328/change-color-of-coc-suggestion-box
+
+set timeoutlen=1000 ttimeoutlen=0
+call plug#begin('~/.vim/plugged')
+Plug 'dense-analysis/ale'
+let g:ale_echo_cursor = 0
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+Plug 'maralla/completor.vim'
+let g:completor_clang_binary = '/usr/bin/clang'
+inoremap <expr> <TAB> pumvisible() ?"\<C-n>": "\<TAB>"
+inoremap <expr> <S-TAB> pumvisible() ?"\<C-p>": "\<S-TAB>"
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme = 'ouo'
 hi Pmenu ctermbg=black ctermfg=white
 hi Ignore ctermbg=black ctermfg=lightblue
 
